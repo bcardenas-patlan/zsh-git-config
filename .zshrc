@@ -1,1 +1,0 @@
-/Users/bpatlan/.zshrc
