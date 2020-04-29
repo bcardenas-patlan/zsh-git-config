@@ -37,7 +37,7 @@ precmd_functions+=( precmd_vcs_info )
 zstyle ':vcs_info:git:*' formats '%b%c%m'
 
 #hook up git functions
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-st-staged git-st
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-st-staged git-st-diff
 
 #define function for untraked files/changes
 function +vi-git-untracked(){
@@ -66,7 +66,7 @@ function +vi-git-st-staged(){
 }
 
 #define function diferences between local and remote
-function +vi-git-st(){
+function +vi-git-st-diff(){
   local ahead behind
   local -a gitstatus
  
